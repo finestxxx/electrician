@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltMasters Electric | 24/7 Emergency Services</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23132440'><path d='M11 15.938l-4.707 4.707c-.39.39-.39 1.024 0 1.414s1.024.39 1.414 0L12 17.352l4.293 4.293c.39.39 1.024.39 1.414 0s.39-1.024 0-1.414L13 15.938V2h-2v13.938z'/></svg>"
+        type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-blue: #132440;
+            --dark-navy: #132440;
+            --light-blue: #4D94FF;
+            /* This color is not currently used but kept for potential future use */
+            --crisp-white: #FFFFFF;
+            --light-gray: #F5F7FA;
+            --dark-gray: #333333;
+            --cta-orange: #FF6B35;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--crisp-white);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark-navy);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--cta-orange);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #e55a2b;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--crisp-white);
+            color: var(--crisp-white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--crisp-white);
+            color: var(--primary-blue);
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-light {
+            background-color: var(--crisp-white);
+        }
+
+        .section-gray {
+            background-color: var(--light-gray);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--crisp-white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--dark-navy);
+        }
+
+        .logo-text span {
+            color: var(--primary-blue);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-navy);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-blue);
+        }
+
+        .cta-button {
+            background-color: var(--cta-orange);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(19, 36, 64, 0.75), rgba(19, 36, 64, 0.85)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(19, 36, 64, 0.75), rgba(19, 36, 64, 0.85)), url('https://images.unsplash.com/photo-1557992260-ec58e38d363c?auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            color: var(--crisp-white);
+            text-align: center;
+            padding: 10rem 0 5rem;
+            margin-top: 70px;
+            /* Pushes content below fixed header on mobile */
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--crisp-white);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Hide desktop-only hero image on mobile */
+        .hero-image {
+            display: none;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            position: relative;
+            /* Needed for pseudo-elements */
+            background-color: var(--dark-navy);
+            /* The border color */
+            border-radius: 8px;
+            padding: 3px;
+            /* This padding creates the border thickness */
+            text-align: center;
+            box-shadow: var(--shadow);
+            /* Initial state for animation */
+            opacity: 0;
+            transform: translateY(30px);
+            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+            overflow: hidden;
+            /* Hides the parts of the gradient outside the border */
+            z-index: 1;
+        }
+
+        /* The animated gradient that spins */
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 150%;
+            background: conic-gradient(transparent,
+                    transparent,
+                    transparent,
+                    var(--crisp-white)
+                    /* The "lightning" color */
+                );
+            animation: rotate 4s linear infinite;
+        }
+
+        /* An inner element to create the white background and hide the center of the gradient */
+        .service-card-inner {
+            background-color: var(--crisp-white);
+            border-radius: 6px;
+            /* Slightly less than the parent to show the border */
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+            /* Sits on top of the ::before pseudo-element */
+        }
+
+        @keyframes rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .service-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            /* This will apply on top of the visible state */
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        /* Why Choose Us Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+        }
+
+        .feature.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--cta-orange);
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Testimonials */
+        .testimonials-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding: 0 2rem;
+            /* Add padding for navigation arrows */
+        }
+
+        .testimonial {
+            background-color: var(--crisp-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            /* margin-bottom removed for carousel */
+            height: 100%;
+            /* Ensure slides are same height if content differs */
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .stars {
+            color: #FFD700;
+            margin-bottom: 0.5rem;
+        }
+
+        .author-info {
+            margin-left: 1rem;
+        }
+
+        .author-info h4 {
+            margin-bottom: 0;
+        }
+
+        /* Swiper Carousel Styles */
+        .swiper-pagination-bullet-active {
+            background-color: var(--primary-blue) !important;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--primary-blue) !important;
+            transition: color 0.3s ease;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            color: var(--cta-orange) !important;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background-color: var(--crisp-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-right: 1rem;
+            width: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-navy);
+            color: var(--crisp-white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-column h3 {
+            color: var(--crisp-white);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--crisp-white);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--crisp-white);
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90vh;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: var(--crisp-white);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            color: #bbb;
+        }
+
+        /* Desktop-Specific Styles */
+        @media (min-width: 992px) {
+            .hero {
+                background: var(--primary-blue);
+                padding: 0;
+                text-align: left;
+                position: relative;
+                overflow: hidden;
+                min-height: 100vh;
+                /* Make hero section cover the full viewport height */
+                margin-top: 0;
+                /* Remove top margin to align with top of viewport */
+            }
+
+            .hero-image {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                max-width: 130%;
+                max-height: 140%;
+                z-index: 1;
+                /* Add a mask to fade the left edge of the image */
+                -webkit-mask-image: linear-gradient(to right, transparent 5%, black 30%);
+                mask-image: linear-gradient(to right, transparent 5%, black 30%);
+            }
+
+            .hero .container {
+                position: absolute;
+                bottom: 4rem;
+                left: 0;
+                right: 0;
+                z-index: 2;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                /* Reduced title size */
+                max-width: 50%;
+            }
+
+            .hero p {
+                max-width: 45%;
+                margin-left: 0;
+            }
+
+            .hero-buttons {
+                justify-content: flex-start;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 70px);
+                background-color: var(--crisp-white);
+                transition: left 0.3s ease;
+                box-shadow: var(--shadow);
+                padding: 2rem;
+            }
+
+            nav.active {
+                left: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 1rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 8rem 0 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <div class="logo-text">Volt<span>Masters</span></div>
+            </div>
+
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="tel:5551234567" class="cta-button">Call Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <img src="https://images.unsplash.com/photo-1557992260-ec58e38d363c?auto=format&fit=crop&w=2070&q=80"
+                alt="Professional electrician working on a circuit breaker" class="hero-image">
+            <h1>24/7 Emergency Electrical Services You Can Trust</h1>
+            <p>Fast, Reliable, and Professional Electricians Serving Your Area. No Extra Charges for Nights or Weekends.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn">Schedule Service Online</a>
+                <a href="tel:5559876543" class="btn btn-secondary">Or Call Now: (555) 987-6543</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-light" id="services">
+        <div class="container">
+            <h2>Our Professional Electrical Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-bolt-lightning"></i>
+                        </div>
+                        <h3>Emergency Electrical</h3>
+                        <p>Power outages, sparking outlets, circuit breaker issues. We're here 24/7 to solve your
+                            emergencies quickly
+                            and efficiently.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Panel Upgrades</h3>
+                        <p>Outdated panel? We install modern, safe, and efficient circuit breaker panels to meet your
+                            home's
+                            power demands.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Lighting Installation</h3>
+                        <p>From recessed lighting to custom fixtures, we brighten up your space with professional and
+                            stylish lighting solutions.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3>Wiring & Rewiring</h3>
+                        <p>Whether it's for a new construction or updating old, faulty wiring, our experts ensure your
+                            home
+                            is safe and up to code.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section-gray" id="about">
+        <div class="container">
+            <h2>Why Homeowners Trust VoltMasters</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Licensed & Insured</h3>
+                        <p>Your peace of mind is our priority. We are fully licensed and insured for your protection.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Upfront Pricing</h3>
+                        <p>No hidden fees, no surprises. You'll know the cost before we start any work.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>24/7 Availability</h3>
+                        <p>Plumbing disasters don't wait for business hours. Neither do we. We're always available.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Satisfaction Guarantee</h3>
+                        <p>We guarantee our work. If you're not happy, we'll make it right. Your satisfaction is our
+                            promise.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-light" id="testimonials">
+        <div class="container">
+            <h2>Hear From Our Satisfied Clients</h2>
+            <!-- Swiper -->
+            <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial">
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-content">"We had a complete power outage in our home late on a
+                                Saturday.
+                                VoltMasters responded within 30 minutes and fixed the issue professionally. Their
+                                emergency service saved us from a major headache!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Sarah K.</h4>
+                                    <p>Downtown</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial">
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-content">"The team at VoltMasters upgraded our old electrical panel
+                                efficiently and at a fair price. They were clean, professional, and explained
+                                everything clearly. Highly recommend for any electrical work!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Michael T.</h4>
+                                    <p>Westside</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section class="section-gray" id="gallery">
+        <div class="container">
+            <h2>Our Work in Action</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <a
+                        href="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1170&q=80">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1170&q=80"
+                            alt="Electrician working on a circuit breaker">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a
+                        href="https://images.unsplash.com/photo-1487894342812-822841854b83?auto=format&fit=crop&w=1170&q=80">
+                        <img src="https://images.unsplash.com/photo-1487894342812-822841854b83?auto=format&fit=crop&w=1170&q=80"
+                            alt="Close-up of electrical wiring">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a
+                        href="https://images.unsplash.com/photo-1617521113323-445ac265c989?auto=format&fit=crop&w=1170&q=80">
+                        <img src="https://images.unsplash.com/photo-1617521113323-445ac265c989?auto=format&fit=crop&w=1170&q=80"
+                            alt="Electrician installing a light fixture">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a
+                        href="https://images.unsplash.com/photo-1517026575980-3e1e202ab25a?auto=format&fit=crop&w=1170&q=80">
+                        <img src="https://images.unsplash.com/photo-1517026575980-3e1e202ab25a?auto=format&fit=crop&w=1170&q=80"
+                            alt="Electrician with tools">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a
+                        href="https://images.unsplash.com/photo-1604709177595-ee9c35204264?auto=format&fit=crop&w=1170&q=80">
+                        <img src="https://images.unsplash.com/photo-1604709177595-ee9c35204264?auto=format&fit=crop&w=1170&q=80"
+                            alt="Modern kitchen with stylish lighting">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a
+                        href="https://images.unsplash.com/photo-1598300188927-88b3634515a3?auto=format&fit=crop&w=1170&q=80">
+                        <img src="https://images.unsplash.com/photo-1598300188927-88b3634515a3?auto=format&fit=crop&w=1170&q=80"
+                            alt="Cleanly installed electrical outlets">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-light" id="contact">
+        <div class="container">
+            <h2>Ready for a Solution? Get a Free Quote Today!</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="issue">Describe Your Issue</label>
+                            <textarea id="issue" class="form-control" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">Send My Free Quote</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>(555) 987-6543</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contact@voltmasters.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Service Area</h3>
+                            <p>Serving all surrounding cities and towns</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3>Hours</h3>
+                            <p>24/7 Emergency Service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="logo">
+                        <i class="fas fa-bolt"></i>
+                        <div class="logo-text">Volt<span>Masters</span></div>
+                    </div>
+                    <p>Your trusted partner for all electrical needs. Fast, reliable, and professional service 24/7.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Service Areas</h3>
+                    <ul>
+                        <li>Downtown</li>
+                        <li>Westside</li>
+                        <li>North District</li>
+                        <li>East End</li>
+                        <li>South Borough</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (555) 987-6543</li>
+                        <li><i class="fas fa-envelope"></i> contact@voltmasters.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Electric Ave, Suite 100</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Emergency Service</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2023 VoltMasters Electric. All rights reserved. | Licensed & Insured</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+
+    <!-- Swiper.js JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function () {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function () {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+
+        // Form submission
+        document.getElementById('quoteForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your request! We will contact you shortly with your free quote for electrical services.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const galleryLinks = document.querySelectorAll('.gallery-grid .gallery-item a');
+        const lightboxClose = document.querySelector('.lightbox-close');
+
+        galleryLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                lightbox.classList.add('active');
+                lightboxImg.src = this.href;
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            // Reset src to prevent showing old image briefly on next open
+            lightboxImg.src = '';
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) { // Close only if clicking on the background
+                closeLightbox();
+            }
+        });
+
+        // Scroll-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: Unobserve the element after it becomes visible
+                    // so the animation doesn't re-trigger.
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        const elementsToAnimate = document.querySelectorAll('.service-card, .feature');
+        elementsToAnimate.forEach(el => {
+            observer.observe(el);
+        });
+
+        // Testimonials Carousel
+        const swiper = new Swiper('.testimonials-swiper', {
+            // Optional parameters
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>
