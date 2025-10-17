@@ -206,11 +206,28 @@
             text-decoration: none;
             color: var(--dark-navy);
             font-weight: 600;
+            position: relative;
+            padding-bottom: 5px;
             transition: color 0.3s ease;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: width 0.3s ease-out;
         }
 
         nav ul li a:hover {
             color: var(--primary-blue);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
         }
 
         .cta-button {
@@ -269,60 +286,34 @@
 
         .service-card {
             position: relative;
-            /* Needed for pseudo-elements */
-            background-color: var(--dark-navy);
-            /* The border color */
+            background-color: var(--crisp-white);
             border-radius: 8px;
-            padding: 3px;
-            /* This padding creates the border thickness */
             text-align: center;
             box-shadow: var(--shadow);
-            /* Initial state for animation */
             opacity: 0;
             transform: translateY(30px);
-            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
-            overflow: hidden;
-            /* Hides the parts of the gradient outside the border */
-            z-index: 1;
-        }
-
-        /* The animated gradient that spins */
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 150%;
-            height: 150%;
-            background: conic-gradient(transparent,
-                    transparent,
-                    transparent,
-                    var(--crisp-white)
-                    /* The "lightning" color */
-                );
-            animation: rotate 4s linear infinite;
-        }
-
-        /* An inner element to create the white background and hide the center of the gradient */
-        .service-card-inner {
-            background-color: var(--crisp-white);
-            border-radius: 6px;
-            /* Slightly less than the parent to show the border */
+            transition: transform 0.4s ease-out, opacity 0.4s ease-out, box-shadow 0.3s ease-out;
             padding: 2rem;
-            position: relative;
-            z-index: 2;
-            /* Sits on top of the ::before pseudo-element */
         }
 
-        @keyframes rotate {
-            from {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
+        .services-grid .service-card:nth-child(2) {
+            transition-delay: 0.1s;
+        }
 
-            to {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
+        .services-grid .service-card:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+
+        .services-grid .service-card:nth-child(4) {
+            transition-delay: 0.3s;
+        }
+
+        .services-grid .service-card:nth-child(5) {
+            transition-delay: 0.4s;
+        }
+
+        .services-grid .service-card:nth-child(6) {
+            transition-delay: 0.5s;
         }
 
         .service-card.visible {
@@ -332,13 +323,18 @@
 
         .service-card:hover {
             transform: translateY(-10px);
-            /* This will apply on top of the visible state */
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
         }
 
         .service-icon {
             font-size: 3rem;
             color: var(--primary-blue);
             margin-bottom: 1.5rem;
+            transition: transform 0.3s ease-out;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
         }
 
         .service-card h3 {
@@ -357,7 +353,27 @@
             align-items: flex-start;
             opacity: 0;
             transform: translateY(30px);
-            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+            transition: transform 0.6s ease-out, opacity 0.6s ease-out, box-shadow 0.3s ease-out;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: var(--crisp-white);
+        }
+
+        .features .feature:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+
+        .features .feature:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+
+        .features .feature:nth-child(4) {
+            transition-delay: 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
         }
 
         .feature.visible {
@@ -753,39 +769,33 @@
             <h2>Services — Residential & Home-Focused</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-icon" aria-hidden="true">
-                            <i class="fas fa-house"></i>
-                        </div>
-                        <h3>Residential Electrical</h3>
-                        <p>Repairs, outlet and switch work, troubleshooting intermittent power, and minor wiring tasks
-                            with
-                            safety-first practice.</p>
+                    <div class="service-icon" aria-hidden="true">
+                        <i class="fas fa-house"></i>
                     </div>
+                    <h3>Residential Electrical</h3>
+                    <p>Repairs, outlet and switch work, troubleshooting intermittent power, and minor wiring tasks
+                        with
+                        safety-first practice.</p>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-icon" aria-hidden="true">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>Lighting Design & Installation</h3>
-                        <p>Indoor and outdoor lighting: recessed, pendant, task, and smart lighting setups to brighten
-                            your
-                            home the way you want it.</p>
+                    <div class="service-icon" aria-hidden="true">
+                        <i class="fas fa-lightbulb"></i>
                     </div>
+                    <h3>Lighting Design & Installation</h3>
+                    <p>Indoor and outdoor lighting: recessed, pendant, task, and smart lighting setups to brighten
+                        your
+                        home the way you want it.</p>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-card-inner">
-                        <div class="service-icon" aria-hidden="true">
-                            <i class="fas fa-car-battery"></i>
-                        </div>
-                        <h3>EV Charger Installation</h3>
-                        <p>Site assessments, dedicated circuit installation, and safe, code-compliant EV charger setup
-                            for
-                            home garages and driveways.</p>
+                    <div class="service-icon" aria-hidden="true">
+                        <i class="fas fa-car-battery"></i>
                     </div>
+                    <h3>EV Charger Installation</h3>
+                    <p>Site assessments, dedicated circuit installation, and safe, code-compliant EV charger setup
+                        for
+                        home garages and driveways.</p>
                 </div>
 
                 <div class="service-card">
@@ -956,9 +966,7 @@
             <h2>Work Gallery</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img loading="lazy"
-                        src="images/karly2.jpg"
-                        alt="Electrician working on a circuit breaker">
+                    <img loading="lazy" src="images/karly2.jpg" alt=" Electrician working on a circuit breaker">
                 </div>
                 <div class="gallery-item">
                     <img loading="lazy"
@@ -1249,4 +1257,3 @@
 </body>
 
 </html>
-
