@@ -4,13 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoltMasters Electric | 24/7 Emergency Services</title>
+    <title>Karly The Sparky — Vancouver Electrician | Residential & EV Chargers</title>
+
+    <!-- Primary Meta -->
+    <meta name="description"
+        content="Karly The Sparky — Licensed electrician in Vancouver, BC. Residential electrical, lighting, EV charger installs, panel upgrades, renovations, and safety inspections. 24/7 emergency response.">
+    <meta name="keywords"
+        content="Vancouver electrician, residential electrician vancouver, EV charger installation Vancouver, panel upgrades, electrical inspections, lighting installation">
+    <meta name="author" content="Karly The Sparky">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Karly The Sparky — Vancouver Electrician">
+    <meta property="og:description"
+        content="Licensed electrician serving Vancouver, BC. Residential electrical, EV chargers, lighting, panel upgrades, renovations & safety inspections.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1557992260-ec58e38d363c?auto=format&fit=crop&w=1600&q=80">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:site_name" content="Karly The Sparky">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Karly The Sparky — Vancouver Electrician">
+    <meta name="twitter:description"
+        content="Licensed electrician in Vancouver, BC. Residential electrical work, EV chargers, lighting, panel upgrades, renovations, and inspections.">
+    <meta name="twitter:image"
+        content="https://images.unsplash.com/photo-1557992260-ec58e38d363c?auto=format&fit=crop&w=1600&q=80">
+
+    <!-- Preconnect / Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image"
+        href="https://images.unsplash.com/photo-1557992260-ec58e38d363c?auto=format&fit=crop&w=2070&q=80">
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <!-- Google Fonts used in CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon (SVG inline as data URL) -->
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23132440'><path d='M11 15.938l-4.707 4.707c-.39.39-.39 1.024 0 1.414s1.024.39 1.414 0L12 17.352l4.293 4.293c.39.39 1.024.39 1.414 0s.39-1.024 0-1.414L13 15.938V2h-2v13.938z'/></svg>"
         type="image/svg+xml">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Swiper.js CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <style>
         /* Base Styles */
         :root {
@@ -186,8 +228,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(19, 36, 64, 0.75), rgba(19, 36, 64, 0.85)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80') no-repeat center center/cover;
-            background: linear-gradient(rgba(19, 36, 64, 0.75), rgba(19, 36, 64, 0.85)), url('https://images.unsplash.com/photo-1557992260-ec58e38d363c?auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(19, 36, 64, 0.75), rgba(19, 36, 64, 0.85)), url('images/karly1.jpg') no-repeat center center/cover;
             color: var(--crisp-white);
             text-align: center;
             padding: 10rem 0 5rem;
@@ -544,51 +585,10 @@
             display: block;
         }
 
-        /* Lightbox Styles */
-        .lightbox {
-            position: fixed;
-            z-index: 2000;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .lightbox.active {
-            display: flex;
-        }
-
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 90vh;
-            display: block;
-            border-radius: 8px;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: var(--crisp-white);
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .lightbox-close:hover {
-            color: #bbb;
-        }
-
         /* Desktop-Specific Styles */
         @media (min-width: 992px) {
             .hero {
-                background: var(--primary-blue);
+                background: linear-gradient(to right, rgba(19, 36, 64, 1) 30%, rgba(19, 36, 64, 0.4) 70%), url('images/karly1.jpg') no-repeat center center/cover;
                 padding: 0;
                 text-align: left;
                 position: relative;
@@ -600,16 +600,7 @@
             }
 
             .hero-image {
-                display: block;
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                max-width: 130%;
-                max-height: 140%;
-                z-index: 1;
-                /* Add a mask to fade the left edge of the image */
-                -webkit-mask-image: linear-gradient(to right, transparent 5%, black 30%);
-                mask-image: linear-gradient(to right, transparent 5%, black 30%);
+                display: none;
             }
 
             .hero .container {
@@ -625,11 +616,11 @@
 
             .hero h1 {
                 font-size: 2.5rem;
-                /* Reduced title size */
                 max-width: 50%;
             }
 
             .hero p {
+                font-size: 1.2rem;
                 max-width: 45%;
                 margin-left: 0;
             }
@@ -719,12 +710,12 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <div class="logo">
+            <div class="logo" aria-hidden="true">
                 <i class="fas fa-bolt"></i>
-                <div class="logo-text">Volt<span>Masters</span></div>
+                <div class="logo-text">Karly<span> The Sparky</span></div>
             </div>
 
-            <div class="mobile-menu">
+            <div class="mobile-menu" aria-label="Open navigation" title="Open menu">
                 <i class="fas fa-bars"></i>
             </div>
 
@@ -732,80 +723,104 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="tel:5551234567" class="cta-button">Call Now</a></li>
+                    <li><a href="tel:+16045551234" class="cta-button">Call Now</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" aria-label="Hero: Karly The Sparky">
         <div class="container">
-            <img src=images/Screenshot_20251015-220556.jpg
-                alt="Professional electrician working on a circuit breaker" class="hero-image">
-            <h1>24/7 Emergency Electrical Services You Can Trust</h1>
-            <p>Fast, Reliable, and Professional Electricians Serving Your Area. No Extra Charges for Nights or Weekends.
-            </p>
+            <h1>Trusted Vancouver Electrician — Fast, Friendly, Local</h1>
+            <p>I'm Karly — a licensed electrician in Vancouver, BC. I handle residential electrical repairs,
+                lighting design, EV charger installs, panel upgrades, renovations and safety inspections. Same-day
+                emergency response when possible.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn">Schedule Service Online</a>
-                <a href="tel:5559876543" class="btn btn-secondary">Or Call Now: (555) 987-6543</a>
+                <a href="#contact" class="btn">Schedule a Free Quote</a>
+                <a href="tel:+16045551234" class="btn btn-secondary">Or Call Now: (604) 555-1234</a>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="section-light" id="services">
+    <section class="section-light" id="services" aria-label="Services">
         <div class="container">
-            <h2>Our Professional Electrical Services</h2>
+            <h2>Services — Residential & Home-Focused</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-card-inner">
-                        <div class="service-icon">
-                            <i class="fas fa-bolt-lightning"></i>
+                        <div class="service-icon" aria-hidden="true">
+                            <i class="fas fa-house"></i>
                         </div>
-                        <h3>Emergency Electrical</h3>
-                        <p>Power outages, sparking outlets, circuit breaker issues. We're here 24/7 to solve your
-                            emergencies quickly
-                            and efficiently.</p>
+                        <h3>Residential Electrical</h3>
+                        <p>Repairs, outlet and switch work, troubleshooting intermittent power, and minor wiring tasks
+                            with
+                            safety-first practice.</p>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-card-inner">
-                        <div class="service-icon">
+                        <div class="service-icon" aria-hidden="true">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Lighting Design & Installation</h3>
+                        <p>Indoor and outdoor lighting: recessed, pendant, task, and smart lighting setups to brighten
+                            your
+                            home the way you want it.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-icon" aria-hidden="true">
+                            <i class="fas fa-car-battery"></i>
+                        </div>
+                        <h3>EV Charger Installation</h3>
+                        <p>Site assessments, dedicated circuit installation, and safe, code-compliant EV charger setup
+                            for
+                            home garages and driveways.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-icon" aria-hidden="true">
                             <i class="fas fa-server"></i>
                         </div>
                         <h3>Panel Upgrades</h3>
-                        <p>Outdated panel? We install modern, safe, and efficient circuit breaker panels to meet your
-                            home's
-                            power demands.</p>
+                        <p>Replace outdated panels, install modern breakers, and upgrade capacity to meet today's
+                            household
+                            power needs.</p>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-card-inner">
-                        <div class="service-icon">
-                            <i class="fas fa-lightbulb"></i>
+                        <div class="service-icon" aria-hidden="true">
+                            <i class="fas fa-project-diagram"></i>
                         </div>
-                        <h3>Lighting Installation</h3>
-                        <p>From recessed lighting to custom fixtures, we brighten up your space with professional and
-                            stylish lighting solutions.</p>
+                        <h3>Home Renovations</h3>
+                        <p>Wiring and electrical planning for renovations — kitchens, bathrooms, and full-home upgrades
+                            with
+                            minimal disruption.</p>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-card-inner">
-                        <div class="service-icon">
-                            <i class="fas fa-plug"></i>
+                        <div class="service-icon" aria-hidden="true">
+                            <i class="fas fa-search"></i>
                         </div>
-                        <h3>Wiring & Rewiring</h3>
-                        <p>Whether it's for a new construction or updating old, faulty wiring, our experts ensure your
-                            home
-                            is safe and up to code.</p>
+                        <h3>Safety Inspections</h3>
+                        <p>Home electrical inspections, landlord reports, and code advice with clear remediation
+                            estimates if
+                            needed.</p>
                     </div>
                 </div>
             </div>
@@ -813,9 +828,9 @@
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="section-gray" id="about">
+    <section class="section-gray" id="about" aria-label="About Karly">
         <div class="container">
-            <h2>Why Homeowners Trust VoltMasters</h2>
+            <h2>Why Neighbours Choose Karly</h2>
             <div class="features">
                 <div class="feature">
                     <div class="feature-icon">
@@ -823,8 +838,8 @@
                     </div>
                     <div class="feature-content">
                         <h3>Licensed & Insured</h3>
-                        <p>Your peace of mind is our priority. We are fully licensed and insured for your protection.
-                        </p>
+                        <p>Your safety matters. I carry proper licensing and insurance for residential work in
+                            Vancouver.</p>
                     </div>
                 </div>
 
@@ -834,7 +849,7 @@
                     </div>
                     <div class="feature-content">
                         <h3>Upfront Pricing</h3>
-                        <p>No hidden fees, no surprises. You'll know the cost before we start any work.</p>
+                        <p>Transparent quotes before work begins — no hidden fees, clear scope, clear pricing.</p>
                     </div>
                 </div>
 
@@ -843,8 +858,9 @@
                         <i class="fas fa-clock"></i>
                     </div>
                     <div class="feature-content">
-                        <h3>24/7 Availability</h3>
-                        <p>Plumbing disasters don't wait for business hours. Neither do we. We're always available.</p>
+                        <h3>Responsive & Reliable</h3>
+                        <p>I respond to urgent calls as quickly as possible and communicate clearly about scheduling and
+                            timing.</p>
                     </div>
                 </div>
 
@@ -854,8 +870,8 @@
                     </div>
                     <div class="feature-content">
                         <h3>Satisfaction Guarantee</h3>
-                        <p>We guarantee our work. If you're not happy, we'll make it right. Your satisfaction is our
-                            promise.</p>
+                        <p>Work completed to code, tested, and cleaned up — I make it right if something's not right.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -863,27 +879,27 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="section-light" id="testimonials">
+    <section class="section-light" id="testimonials" aria-label="Testimonials">
         <div class="container">
-            <h2>Hear From Our Satisfied Clients</h2>
+            <h2>What Vancouver Neighbours Say</h2>
             <!-- Swiper -->
             <div class="swiper testimonials-swiper">
                 <div class="swiper-wrapper">
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <div class="testimonial">
-                            <div class="stars">
+                            <div class="stars" aria-hidden="true">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
-                            <p class="testimonial-content">"We had a complete power outage in our home late on a
-                                Saturday.
-                                VoltMasters responded within 30 minutes and fixed the issue professionally. Their
-                                emergency service saved us from a major headache!"</p>
+                            <p class="testimonial-content">"Karly responded quickly when our breaker tripped late at
+                                night. She diagnosed and fixed the problem, explained what caused it, and left
+                                everything
+                                neat. Highly recommended."</p>
                             <div class="testimonial-author">
                                 <div class="author-info">
                                     <h4>Sarah K.</h4>
-                                    <p>Downtown</p>
+                                    <p>Kitsilano</p>
                                 </div>
                             </div>
                         </div>
@@ -891,17 +907,35 @@
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
                         <div class="testimonial">
-                            <div class="stars">
+                            <div class="stars" aria-hidden="true">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                     class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
-                            <p class="testimonial-content">"The team at VoltMasters upgraded our old electrical panel
-                                efficiently and at a fair price. They were clean, professional, and explained
-                                everything clearly. Highly recommend for any electrical work!"</p>
+                            <p class="testimonial-content">"Installed an EV charger in my garage — Karly did a great
+                                job,
+                                tidy wiring, explained the options and gave a fair price."</p>
                             <div class="testimonial-author">
                                 <div class="author-info">
                                     <h4>Michael T.</h4>
-                                    <p>Westside</p>
+                                    <p>Mount Pleasant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial">
+                            <div class="stars" aria-hidden="true">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-content">"Very clear pricing and excellent renovation wiring. Karly
+                                helped plan the layout and kept the site tidy."</p>
+                            <div class="testimonial-author">
+                                <div class="author-info">
+                                    <h4>Priya S.</h4>
+                                    <p>Commercial Drive</p>
                                 </div>
                             </div>
                         </div>
@@ -910,67 +944,55 @@
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
                 <!-- Add Navigation -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next" aria-label="Next testimonial"></div>
+                <div class="swiper-button-prev" aria-label="Previous testimonial"></div>
             </div>
         </div>
     </section>
 
     <!-- Image Gallery Section -->
-    <section class="section-gray" id="gallery">
+    <section class="section-gray" id="gallery" aria-label="Gallery">
         <div class="container">
-            <h2>Our Work in Action</h2>
+            <h2>Work Gallery</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <a
-                        href="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1170&q=80">
-                        <img src=images/Screenshot_20251015-214302.jpg
-                            alt="Electrician working on a circuit breaker">
-                    </a>
+                    <img loading="lazy"
+                        src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1170&q=80"
+                        alt="Electrician working on a circuit breaker">
                 </div>
                 <div class="gallery-item">
-                    <a
-                        href="https://images.unsplash.com/photo-1487894342812-822841854b83?auto=format&fit=crop&w=1170&q=80">
-                        <img src="https://images.unsplash.com/photo-1487894342812-822841854b83?auto=format&fit=crop&w=1170&q=80"
-                            alt="Close-up of electrical wiring">
-                    </a>
+                    <img loading="lazy"
+                        src="https://images.unsplash.com/photo-1487894342812-822841854b83?auto=format&fit=crop&w=1170&q=80"
+                        alt="Close-up of electrical wiring">
                 </div>
                 <div class="gallery-item">
-                    <a
-                        href="https://images.unsplash.com/photo-1617521113323-445ac265c989?auto=format&fit=crop&w=1170&q=80">
-                        <img src="https://images.unsplash.com/photo-1617521113323-445ac265c989?auto=format&fit=crop&w=1170&q=80"
-                            alt="Electrician installing a light fixture">
-                    </a>
+                    <img loading="lazy"
+                        src="https://images.unsplash.com/photo-1617521113323-445ac265c989?auto=format&fit=crop&w=1170&q=80"
+                        alt="Electrician installing a light fixture">
                 </div>
                 <div class="gallery-item">
-                    <a
-                        href="https://images.unsplash.com/photo-1517026575980-3e1e202ab25a?auto=format&fit=crop&w=1170&q=80">
-                        <img src="https://images.unsplash.com/photo-1517026575980-3e1e202ab25a?auto=format&fit=crop&w=1170&q=80"
-                            alt="Electrician with tools">
-                    </a>
+                    <img loading="lazy"
+                        src="https://images.unsplash.com/photo-1517026575980-3e1e202ab25a?auto=format&fit=crop&w=1170&q=80"
+                        alt="Electrician with tools">
                 </div>
                 <div class="gallery-item">
-                    <a
-                        href="https://images.unsplash.com/photo-1604709177595-ee9c35204264?auto=format&fit=crop&w=1170&q=80">
-                        <img src="https://images.unsplash.com/photo-1604709177595-ee9c35204264?auto=format&fit=crop&w=1170&q=80"
-                            alt="Modern kitchen with stylish lighting">
-                    </a>
+                    <img loading="lazy"
+                        src="https://images.unsplash.com/photo-1604709177595-ee9c35204264?auto=format&fit=crop&w=1170&q=80"
+                        alt="Modern kitchen with stylish lighting">
                 </div>
                 <div class="gallery-item">
-                    <a
-                        href="https://images.unsplash.com/photo-1598300188927-88b3634515a3?auto=format&fit=crop&w=1170&q=80">
-                        <img src="https://images.unsplash.com/photo-1598300188927-88b3634515a3?auto=format&fit=crop&w=1170&q=80"
-                            alt="Cleanly installed electrical outlets">
-                    </a>
+                    <img loading="lazy"
+                        src="https://images.unsplash.com/photo-1598300188927-88b3634515a3?auto=format&fit=crop&w=1170&q=80"
+                        alt="Cleanly installed electrical outlets">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="section-light" id="contact">
+    <section class="section-light" id="contact" aria-label="Contact">
         <div class="container">
-            <h2>Ready for a Solution? Get a Free Quote Today!</h2>
+            <h2>Ready for a Free Quote? Contact Karly</h2>
             <div class="contact-container">
                 <div class="contact-form">
                     <form id="quoteForm">
@@ -998,44 +1020,44 @@
                     </form>
                 </div>
 
-                <div class="contact-info">
+                <div class="contact-info" aria-label="Contact details">
                     <div class="contact-item">
-                        <div class="contact-icon">
+                        <div class="contact-icon" aria-hidden="true">
                             <i class="fas fa-phone"></i>
                         </div>
                         <div>
                             <h3>Phone</h3>
-                            <p>(555) 987-6543</p>
+                            <p>(604) 555-1234</p>
                         </div>
                     </div>
 
                     <div class="contact-item">
-                        <div class="contact-icon">
+                        <div class="contact-icon" aria-hidden="true">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div>
                             <h3>Email</h3>
-                            <p>contact@voltmasters.com</p>
+                            <p>karly@karlythesparky.com</p>
                         </div>
                     </div>
 
                     <div class="contact-item">
-                        <div class="contact-icon">
+                        <div class="contact-icon" aria-hidden="true">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
                             <h3>Service Area</h3>
-                            <p>Serving all surrounding cities and towns</p>
+                            <p>Vancouver, BC — serving surrounding neighbourhoods</p>
                         </div>
                     </div>
 
                     <div class="contact-item">
-                        <div class="contact-icon">
+                        <div class="contact-icon" aria-hidden="true">
                             <i class="fas fa-clock"></i>
                         </div>
                         <div>
                             <h3>Hours</h3>
-                            <p>24/7 Emergency Service</p>
+                            <p>24/7 emergency response where possible; scheduled work by appointment</p>
                         </div>
                     </div>
                 </div>
@@ -1044,20 +1066,21 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer aria-label="Footer">
         <div class="container">
             <div class="footer-container">
                 <div class="footer-column">
-                    <div class="logo">
+                    <div class="logo" aria-hidden="true">
                         <i class="fas fa-bolt"></i>
-                        <div class="logo-text">Volt<span>Masters</span></div>
+                        <div class="logo-text">Karly<span> The Sparky</span></div>
                     </div>
-                    <p>Your trusted partner for all electrical needs. Fast, reliable, and professional service 24/7.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <p>Your trusted local electrician in Vancouver. Fast, reliable, and professional service for homes.
+                    </p>
+                    <div class="social-icons" aria-hidden="true">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
 
@@ -1066,7 +1089,7 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -1076,42 +1099,69 @@
                 <div class="footer-column">
                     <h3>Service Areas</h3>
                     <ul>
-                        <li>Downtown</li>
+                        <li>Vancouver — Downtown</li>
+                        <li>Mount Pleasant</li>
+                        <li>Kitsilano</li>
+                        <li>Commercial Drive</li>
                         <li>Westside</li>
-                        <li>North District</li>
-                        <li>East End</li>
-                        <li>South Borough</li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
                     <h3>Contact Info</h3>
                     <ul>
-                        <li><i class="fas fa-phone"></i> (555) 987-6543</li>
-                        <li><i class="fas fa-envelope"></i> contact@voltmasters.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Electric Ave, Suite 100</li>
-                        <li><i class="fas fa-clock"></i> 24/7 Emergency Service</li>
+                        <li><i class="fas fa-phone"></i> (604) 555-1234</li>
+                        <li><i class="fas fa-envelope"></i> karly@karlythesparky.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Vancouver, BC</li>
+                        <li><i class="fas fa-clock"></i> 24/7 (emergency response when available)</li>
                     </ul>
                 </div>
             </div>
 
             <div class="copyright">
-                <p>&copy; 2023 VoltMasters Electric. All rights reserved. | Licensed & Insured</p>
+                <p>&copy; <span id="year"></span> Karly The Sparky. All rights reserved. | Licensed & Insured</p>
             </div>
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
+    <!-- Swiper.js JS (deferred) -->
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
-    <!-- Swiper.js JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Electrician",
+      "name": "Karly The Sparky",
+      "description": "Licensed electrician in Vancouver, BC offering residential electrical services, EV charger installation, lighting, panel upgrades, renovations and safety inspections.",
+      "telephone": "+1-604-555-1234",
+      "email": "karly@karlythesparky.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Vancouver",
+        "addressRegion": "BC",
+        "addressCountry": "CA"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Vancouver, BC"
+      },
+      "url": "",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "opens": "00:00",
+        "closes": "23:59",
+        "dayOfWeek": [
+          "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+        ]
+      }
+    }
+    </script>
 
     <script>
+        // set copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
         // Mobile Menu Toggle
         document.querySelector('.mobile-menu').addEventListener('click', function () {
             document.querySelector('nav').classList.toggle('active');
@@ -1127,7 +1177,7 @@
         // Form submission
         document.getElementById('quoteForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            alert('Thank you for your request! We will contact you shortly with your free quote for electrical services.');
+            alert('Thanks — Karly has received your request. She will contact you shortly with your free quote.');
             this.reset();
         });
 
@@ -1149,40 +1199,11 @@
             });
         });
 
-        // Lightbox functionality
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const galleryLinks = document.querySelectorAll('.gallery-grid .gallery-item a');
-        const lightboxClose = document.querySelector('.lightbox-close');
-
-        galleryLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                lightbox.classList.add('active');
-                lightboxImg.src = this.href;
-            });
-        });
-
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            // Reset src to prevent showing old image briefly on next open
-            lightboxImg.src = '';
-        }
-
-        lightboxClose.addEventListener('click', closeLightbox);
-        lightbox.addEventListener('click', function (e) {
-            if (e.target === lightbox) { // Close only if clicking on the background
-                closeLightbox();
-            }
-        });
-
         // Scroll-in animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    // Optional: Unobserve the element after it becomes visible
-                    // so the animation doesn't re-trigger.
                     observer.unobserve(entry.target);
                 }
             });
@@ -1195,29 +1216,36 @@
             observer.observe(el);
         });
 
-        // Testimonials Carousel
-        const swiper = new Swiper('.testimonials-swiper', {
-            // Optional parameters
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
+        // Testimonials Carousel — init after Swiper has loaded
+        function initSwiperWhenReady() {
+            if (typeof Swiper === 'undefined') {
+                // try again shortly if the lib hasn't loaded yet
+                setTimeout(initSwiperWhenReady, 200);
+                return;
+            }
 
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
+            const swiper = new Swiper('.testimonials-swiper', {
+                // Optional parameters
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+        initSwiperWhenReady();
     </script>
 </body>
 
-
 </html>
-
